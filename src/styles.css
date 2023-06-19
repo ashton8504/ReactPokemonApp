@@ -1,6 +1,6 @@
 /* Define colors */
 :root {
-    --red: #FF0000;
+    --red: #FF3333;
     --dark-red: #CC0000;
     --blue: #3B4CCA;
     --yellow: #FFDE00;
@@ -10,107 +10,105 @@
   * {
     box-sizing: border-box;
   }
-  
-  body {
-    background-color: var(--blue);
-  }
-  
+
   @font-face {
     font-family: 'Pokemon';
     src: url('./fonts/Pokemon-Hollow.ttf') format('truetype');
   }
   
+  body {
+    background-color: #F4F4F4;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
   .titleHeader {
-    /* Set the font family to Pokemon and the text color to a darker red */
-    font-family: 'Pokemon', sans-serif;
-    color: var(--dark-red);
-    /* Add text shadow for a subtle effect */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-size: 60px;
+    font-size: 48px;
     text-align: center;
+    margin: 40px 0;
+    color: var(--red);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Pokemon', Arial, sans-serif;
   }
   
   /* Search Bar Section Styles */
   .search-bar-container {
-    /* Center the search bar vertically and horizontally */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 30px;
   }
   
   .search-input {
     width: 300px;
     padding: 10px;
     font-size: 16px;
-    /* Add border-radius to make the input field rounded */
     border-radius: 20px;
-    /* Set border color using the defined brown color */
-    border: 1px solid var(--brown);
+    border: none;
+    outline: none;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .search-button {
     margin-top: 10px;
-    /* Set background color to a dark red */
-    background-color: var(--dark-red);
-    color: white;
+    background-color: var(--red);
+    color: #FFFFFF;
     padding: 8px 16px;
     border: none;
-    /* Add border-radius to make the button rounded */
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
   }
   
   .search-button:hover {
-    /* Change background color on hover to a brighter red */
-    background-color: var(--red);
+    background-color: var(--dark-red);
   }
   
   /* Styles for Pokemon Card */
   .pokemon-card {
     margin: 50px auto;
     text-align: center;
-    padding: 10px; /* Reduce the padding to make the card smaller */
-    background-color: #fff;
-    border: 1px solid #fff;
+    padding: 20px;
+    background-color: #FFFFFF;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    width: 200px; /* Adjust the width as desired */
+    width: 250px;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 16px;
   }
   
   .pokemon-card h3 {
     margin-top: 0;
+    font-size: 24px;
+    font-family: Pokemon, sans-serif;
+    color: var(--blue);
   }
   
   .pokemon-image {
-    width: 120px;
-    height: 120px;
-    margin: 0;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .pokemon-card-content p {
-    margin: 1px 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  
-  .close-button {
-    position: static;
-    margin-top: 10px;
+    margin: 0;
+    font-size: 14px;
+    color: var(--brown);
   }
   
   .close-button {
     margin-top: 10px;
     padding: 8px 16px;
     background-color: var(--yellow);
+    color: #FFFFFF;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -118,8 +116,9 @@
   }
   
   .close-button:hover {
-    background-color: var(--red);
+    background-color: #FFB300;
   }
+  
   
   /* Media Queries for Mobile View */
   @media (max-width: 480px) {
