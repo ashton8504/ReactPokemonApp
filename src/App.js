@@ -3,16 +3,31 @@ import SearchBar from "./Components/SearchBar";
 import PokemonCard from "./Components/PokemonCard";
 
 function App() {
-  const [pokemonName, setPokemonName] = useState("");
+  const [selectedPokemon, setSelectedPokemon] = useState(null);
 
-  const handlePokemonSearch = (query) => {
-    setPokemonName(query);
+  const handleSearch = (query) => {
+    setSelectedPokemon(query.toLowerCase());
+  };
+
+  const handleCardClose = () => {
+    setSelectedPokemon(null);
   };
 
   return (
     <div className="App">
-      <SearchBar onPokemonSearch={handlePokemonSearch} />
-      {pokemonName && <PokemonCard name={pokemonName} />}
+      <header>
+        <h1 className="titleHeader">Pokemon Search</h1>
+      </header>
+      <div className="content-container">
+        <div className="search-container">
+          <SearchBar onSearch={handleSearch} />
+        </div>
+        <div className="pokemon-container">
+          {selectedPokemon && (
+            <PokemonCard name={selectedPokemon} onClose={handleCardClose} />
+          )}
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,35 +1,35 @@
 import React, { useState } from "react";
 
-function SearchBar({ onPokemonSearch }) {
+function SearchBar({ onSearch }) {
   const [query, setQuery] = useState("");
+
+  const handleInputChange = (event) => {
+    setQuery(event.target.value);
+  };
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
-      performSearch();
+      onSearch(query);
+      setQuery(""); // Clear the input after search
     }
   };
 
-  const handleSearchClick = () => {
-    performSearch();
-  };
-
-  const performSearch = () => {
-    onPokemonSearch(query);
-    setQuery("");
+  const handleButtonClick = () => {
+    onSearch(query);
+    setQuery(""); // Clear the input after search
   };
 
   return (
     <div className="search-bar-container">
-      <h1 className="titleHeader">Pokemon</h1>
       <input
         type="text"
         className="search-input"
-        placeholder="Search Pokemon"
+        placeholder="Enter a Pokémon name"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={handleInputChange}
         onKeyPress={handleKeyPress}
       />
-      <button className="search-button" onClick={handleSearchClick}>
+      <button className="search-button" onClick={handleButtonClick}>
         Search
       </button>
     </div>
