@@ -11,7 +11,7 @@ function SearchBar({ initialValue, onSearch }) {
 
   return (
       <div className="search-bar-container">
-      <h1>Pokemon</h1>
+      <h1 className="titleHeader">Pokemon</h1>
       <input
         type="text"
         className="search-input"

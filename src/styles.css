@@ -1,14 +1,4 @@
 
-
-
-body{
-    /* background: #3B4CCA; */
-}
-
-/* Styles for SearchBar */
-
-/* styles.css */
-
 .search-bar-container {
     display: flex;
     flex-direction: column;
