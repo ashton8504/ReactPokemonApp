@@ -68,3 +68,39 @@
     
   /* Rest of your styles using the defined colors */
   
+  /* Styles for Pokemon Card */
+
+  .pokemon-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .pokemon-image {
+    width: 200px;
+    height: 200px;
+    margin: 16px auto;
+    object-fit: contain;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    background-color: #ccc;
+  }
+  
