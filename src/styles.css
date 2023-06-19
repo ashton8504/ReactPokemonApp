@@ -1,5 +1,36 @@
+  /* Define colors */
+  :root {
+    --red: #FF0000;
+    --dark-red: #CC0000;
+    --blue: #3B4CCA;
+    --yellow: #FFDE00;
+    --brown: #B3A125;
+  }
 
-.search-bar-container {
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--blue);
+  }
+  
+  @font-face {
+    font-family: 'Pokemon';
+    src: url('./fonts/Pokemon-Hollow.ttf') format('truetype');
+  }
+  
+  /* Rest of your CSS styles */
+  
+  .titleHeader {
+    font-family: 'Pokemon', sans-serif;
+    color: var(--dark-red); /* Set the text color to a darker red */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 60px;
+  }
+  
+  /* Search Bar Section Styles */
+  .search-bar-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +48,7 @@
   
   .search-button {
     margin-top: 10px;
-    background-color: #CC0000;
+    background-color: var(--dark-red);
     color: white;
     padding: 8px 16px;
     border: none;
@@ -27,6 +58,13 @@
   }
   
   .search-button:hover {
-    background-color: #FF0000;
+    background-color: var(--red);
   }
+  
+  /* Add border to input */
+  .search-input {
+    border: 1px solid var(--brown);
+  }
+    
+  /* Rest of your styles using the defined colors */
   
