@@ -5,12 +5,17 @@ function SearchBar({ onPokemonSearch }) {
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
-      onPokemonSearch(query);
+      performSearch();
     }
   };
 
   const handleSearchClick = () => {
+    performSearch();
+  };
+
+  const performSearch = () => {
     onPokemonSearch(query);
+    setQuery("");
   };
 
   return (
